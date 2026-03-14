@@ -14,25 +14,32 @@
 <body class="not-loaded">
     <div class="star-container">
       <button id="click-star" class="click-star" aria-label="Touch the Star">
-        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <radialGradient id="starGlow" cx="60" cy="60" r="60" gradientUnits="userSpaceOnUse">
+            <radialGradient id="starGlow" cx="70" cy="70" r="70" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stop-color="#fff700" stop-opacity="1"/>
               <stop offset="70%" stop-color="#ffd700" stop-opacity="0.7"/>
               <stop offset="100%" stop-color="#fff700" stop-opacity="0"/>
             </radialGradient>
             <filter id="shine" x="-40%" y="-40%" width="180%" height="180%">
-              <feGaussianBlur stdDeviation="8" result="blur"/>
+              <feGaussianBlur stdDeviation="16" result="blur"/>
               <feMerge>
                 <feMergeNode in="blur"/>
                 <feMergeNode in="SourceGraphic"/>
               </feMerge>
             </filter>
           </defs>
-          <polygon points="60,18 74,48 108,52 82,72 90,108 60,88 30,108 38,72 12,52 46,48" fill="url(#starGlow)" stroke="#ffd700" stroke-width="4" filter="url(#shine)" style="stroke-linejoin:round;"/>
-          <ellipse cx="60" cy="40" rx="12" ry="4" fill="#fff" opacity="0.7"/>
+          <path d="M70 40
+            Q78 55 98 60
+            Q130 65 98 90
+            Q110 130 70 110
+            Q30 130 42 90
+            Q10 65 42 60
+            Q62 55 70 40
+            Z" fill="url(#starGlow)" stroke="#ffd700" stroke-width="5" filter="url(#shine)" style="stroke-linejoin:round;"/>
+          <circle cx="70" cy="80" r="18" fill="#8B5C2B" stroke="#6B3A0A" stroke-width="3"/>
         </svg>
-        <span class="star-text sora">Touch the Star</span>
+        <span class="star-text sora">Touch the Flower</span>
       </button>
     </div>
     <div class="countdown" id="countdown" style="display:none;">3</div>
